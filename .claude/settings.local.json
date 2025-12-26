@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(bmad:core:tools:shard-doc)",
+      "Bash(test:*)",
+      "Bash(npx @kayvan/markdown-tree-parser:*)",
+      "Bash(for:*)",
+      "Bash(do mkdir -p \"epic-$i\")",
+      "Bash(done)",
+      "Bash(ls:*)",
+      "Bash(bash split-epics.sh:*)",
+      "Bash(do echo \"=== Epic $i Stories ===\")",
+      "Bash(do if [ -f \"$story\" ])",
+      "Bash(then head -n 1 \"$story\")",
+      "Bash(fi)",
+      "Bash(if [ -d \"C:\\\\Users\\\\ABDULLAH\\\\WebstormProjects\\\\AI-Tools-Atlas\\\\docs\\\\sprint-artifacts\" ])",
+      "Bash(then echo \"Directory exists\")",
+      "Bash(else echo \"Directory does not exist\")",
+      "Bash(mkdir:*)",
+      "Bash(cat:*)"
+    ]
+  }
+}
