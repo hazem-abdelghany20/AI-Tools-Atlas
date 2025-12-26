@@ -17,7 +17,12 @@
       "Bash(then echo \"Directory exists\")",
       "Bash(else echo \"Directory does not exist\")",
       "Bash(mkdir:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(go mod init:*)",
+      "Bash(go get:*)",
+      "Bash(go mod tidy:*)",
+      "Bash(go test:*)",
+      "Bash(go build:*)"
     ]
   }
 }
