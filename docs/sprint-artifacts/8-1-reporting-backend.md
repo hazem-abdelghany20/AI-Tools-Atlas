@@ -34,3 +34,8 @@
 - `backend/internal/moderation/handler.go`
 
 ---
+
+## Change Log:
+| Date | Change |
+|------|--------|
+| 2025-12-26 | Code Review: HIGH - Fixed unsafe type assertions in handler.go (4 occurrences) |

@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/joho/godotenv"
+	"github.com/your-org/ai-tools-atlas-backend/internal/auth"
 	"github.com/your-org/ai-tools-atlas-backend/internal/platform/config"
 	"github.com/your-org/ai-tools-atlas-backend/internal/platform/db"
 	platformhttp "github.com/your-org/ai-tools-atlas-backend/internal/platform/http"
@@ -39,8 +40,11 @@ func main() {
 
 	log.Println("Database connection established")
 
+	// Initialize auth service
+	authService := auth.NewService()
+
 	// Setup router
-	router := platformhttp.SetupRouter(cfg)
+	router := platformhttp.SetupRouter(cfg, database, authService)
 
 	// Create HTTP server
 	srv := &http.Server{

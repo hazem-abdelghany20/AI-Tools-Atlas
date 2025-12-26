@@ -1,5 +1,7 @@
 ### Story 6.3: User Profile & Activity
 
+**Status:** Done ✅
+
 **As a** logged-in user,
 **I want** to view my submitted reviews and bookmarks in one place,
 **So that** I can manage my activity.
@@ -30,3 +32,33 @@
 - `frontend/src/views/ProfileView.vue`
 
 ---
+
+## Tasks
+
+### Task 1: Backend - User Reviews Endpoint ✅
+- [x] Add `ListReviewsByUser` to reviews repository with Tool preload
+- [x] Add `UserReviewResponse` type to service with tool info
+- [x] Add `ListUserReviews` method to service interface
+- [x] Add `GetUserReviews` handler at GET /me/reviews
+- [x] Register route in handler's RegisterRoutes method
+
+### Task 2: Frontend - Profile View ✅
+- [x] Create `ProfileView.vue` with user header section
+- [x] Implement tabs component (Reviews/Bookmarks)
+- [x] Fetch and display user reviews with tool context
+- [x] Display review moderation status badges
+- [x] Integrate bookmarks store for bookmarks tab
+- [x] Add empty states for both tabs
+- [x] Add loading skeletons
+
+### Task 3: Router Integration ✅
+- [x] Add /profile route with requiresAuth meta
+- [x] Redirect to home if not authenticated
+
+---
+
+## Change Log:
+| Date | Change |
+|------|--------|
+| 2025-12-26 | Story implementation completed |
+| 2025-12-26 | Code Review: Passed - only LOW issues |

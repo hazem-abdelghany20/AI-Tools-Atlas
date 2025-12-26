@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/your-org/ai-tools-atlas-backend/internal/auth"
 )
 
 // CORSMiddleware handles Cross-Origin Resource Sharing
@@ -61,5 +62,81 @@ func RequestLoggerMiddleware() gin.HandlerFunc {
 		path := c.Request.URL.Path
 
 		log.Printf("[%s] %s - %d - %v", method, path, statusCode, duration)
+	}
+}
+
+// AuthRequired middleware verifies JWT token from cookie
+func AuthRequired(authService *auth.Service) gin.HandlerFunc {
+	return func(c *gin.Context) {
+		// Get token from cookie
+		cookie, err := c.Cookie("auth_token")
+		if err != nil {
+			ErrorResponse(c, 401, "unauthorized", "Authentication required", nil)
+			c.Abort()
+			return
+		}
+
+		// Validate token
+		claims, err := authService.ValidateToken(cookie)
+		if err != nil {
+			ErrorResponse(c, 401, "unauthorized", "Invalid token", nil)
+			c.Abort()
+			return
+		}
+
+		// Set user context
+		c.Set("user_id", claims.UserID)
+		c.Set("user_role", claims.Role)
+		c.Set("user_email", claims.Email)
+
+		c.Next()
+	}
+}
+
+// AdminRequired middleware checks if user has admin role
+func AdminRequired() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		role, exists := c.Get("user_role")
+		if !exists {
+			ErrorResponse(c, 403, "forbidden", "Access denied: role not found", nil)
+			c.Abort()
+			return
+		}
+
+		if role != "admin" {
+			ErrorResponse(c, 403, "forbidden", "Access denied: admin role required", nil)
+			c.Abort()
+			return
+		}
+
+		c.Next()
+	}
+}
+
+// OptionalAuth middleware attempts to authenticate but doesn't require it
+func OptionalAuth(authService *auth.Service) gin.HandlerFunc {
+	return func(c *gin.Context) {
+		// Try to get token from cookie
+		cookie, err := c.Cookie("auth_token")
+		if err != nil {
+			// No token, continue without authentication
+			c.Next()
+			return
+		}
+
+		// Try to validate token
+		claims, err := authService.ValidateToken(cookie)
+		if err != nil {
+			// Invalid token, continue without authentication
+			c.Next()
+			return
+		}
+
+		// Set user context if valid
+		c.Set("user_id", claims.UserID)
+		c.Set("user_role", claims.Role)
+		c.Set("user_email", claims.Email)
+
+		c.Next()
 	}
 }

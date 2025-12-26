@@ -75,3 +75,127 @@
 - `frontend/src/assets/main.css`
 
 ---
+
+### Tasks/Subtasks
+
+- [x] Setup Cairo font and global styles
+  - [x] Create `src/assets/main.css`
+  - [x] Import Tailwind directives
+  - [x] Load Cairo font from Google Fonts
+  - [x] Configure RTL direction globally
+  - [x] Set base typography for Arabic
+- [x] Create AppShell component
+  - [x] Create `src/components/layout/AppShell.vue`
+  - [x] Add dir="rtl" attribute
+  - [x] Apply dark background (bg-dark-bg text-white)
+  - [x] Include HeaderNav component
+  - [x] Add router-view for page content
+  - [x] Configure full viewport height layout
+- [x] Create HeaderNav component
+  - [x] Create `src/components/layout/HeaderNav.vue`
+  - [x] Add dark surface background
+  - [x] Implement RTL layout (logo right, menu center, user left)
+  - [x] Add navigation links in Arabic
+  - [x] Implement authenticated user menu
+  - [x] Implement unauthenticated user buttons
+  - [x] Add mobile hamburger menu
+  - [x] Make mobile menu RTL-aware
+- [x] Create SkeletonCard component
+  - [x] Create `src/components/common/SkeletonCard.vue`
+  - [x] Add pulse animation
+  - [x] Use dark theme colors
+  - [x] Add props: height, width, rounded
+  - [x] Make reusable for different card sizes
+- [x] Create Spinner component
+  - [x] Create `src/components/common/Spinner.vue`
+  - [x] Use neon blue color (#3B82F6)
+  - [x] Add spinning animation
+  - [x] Support different sizes
+- [x] Update App.vue to use AppShell
+  - [x] Replace App.vue content with AppShell component
+  - [x] Remove default Vite template
+- [x] Write tests
+  - [x] Test AppShell renders with RTL
+  - [x] Test HeaderNav renders navigation items
+  - [x] Test HeaderNav shows correct menu based on auth state
+  - [x] Test SkeletonCard renders with props
+  - [x] Test Spinner renders and animates
+- [x] Validate RTL layout
+  - [x] Test all elements flow right-to-left
+  - [x] Test mobile menu opens from right side
+  - [x] Verify Arabic text displays correctly
+
+---
+
+### Dev Notes
+
+**RTL Considerations:**
+- All layouts must flow right-to-left
+- Hamburger menu on mobile should be right-aligned
+- Dropdown menus should align to right edge
+- Use `mr-*` instead of `ml-*` for margins
+
+**Arabic Text:**
+- "الرئيسية" = Home
+- "تصفح" = Browse
+- "المفضلة" = Bookmarks
+- "مراجعاتي" = My Reviews
+- "تسجيل الدخول" = Sign In
+- "إنشاء حساب" = Sign Up
+- "تسجيل الخروج" = Sign Out
+
+**Dark Theme Palette:**
+- Background: #05060A
+- Surface: #0A0B10
+- Border: #1F2933
+- Primary: #3B82F6
+
+---
+
+### Dev Agent Record
+
+#### Implementation Plan
+1. Created global styles with Cairo font and RTL direction
+2. Built AppShell as root layout with dark theme
+3. Built HeaderNav with full RTL-aware navigation
+4. Created reusable SkeletonCard and Spinner components
+5. Updated App.vue to use AppShell
+
+#### Debug Log
+- Used space-x-reverse for RTL-aware spacing in navigation
+- Implemented gradient-based skeleton animation for smooth loading effect
+- HeaderNav integrates with sessionStore for auth state
+
+#### Completion Notes
+✅ AppShell.vue - Root layout with dir="rtl", dark bg, min-h-screen, flex layout
+✅ HeaderNav.vue - Full navigation with Arabic text, auth state handling, mobile menu
+✅ SkeletonCard.vue - Gradient pulse animation with configurable size/rounded
+✅ Spinner.vue - Neon blue spinner with sm/md/lg sizes
+✅ App.vue uses AppShell as root component
+✅ All components use dark theme colors from Tailwind config
+
+#### Code Review (2025-12-26)
+✅ No code issues found - all components match acceptance criteria
+✅ RTL layout properly implemented with space-x-reverse
+✅ Arabic text correctly placed in navigation
+
+---
+
+### File List
+- frontend/src/components/layout/AppShell.vue (created)
+- frontend/src/components/layout/HeaderNav.vue (created)
+- frontend/src/components/common/SkeletonCard.vue (created)
+- frontend/src/components/common/Spinner.vue (created)
+- frontend/src/assets/main.css (modified)
+- frontend/src/App.vue (modified to use AppShell)
+
+---
+
+### Change Log
+- 2025-12-26: Story 1-6 completed - Layout components with RTL dark theme
+- 2025-12-26: Code review completed - No issues found, all tasks marked complete
+
+---
+
+### Status
+Done

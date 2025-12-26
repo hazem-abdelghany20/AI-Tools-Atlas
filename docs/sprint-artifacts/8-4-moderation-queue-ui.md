@@ -1,4 +1,4 @@
-### Story 8.4: Moderation Queue UI
+### Story 8.4: Moderation Queue UI ✅ DONE
 
 **As a** moderator,
 **I want** a moderation queue UI,
@@ -46,3 +46,8 @@
 - `frontend/src/router/moderation.ts` (moderation routes)
 
 ---
+
+## Change Log:
+| Date | Change |
+|------|--------|
+| 2025-12-26 | Code Review: MEDIUM - Fixed formatDate validation, added Escape key handlers for modals |

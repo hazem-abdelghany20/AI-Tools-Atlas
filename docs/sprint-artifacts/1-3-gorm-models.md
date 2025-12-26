@@ -76,3 +76,126 @@ type Tool struct {
 - `backend/internal/auth/model.go`
 
 ---
+
+### Tasks/Subtasks
+
+- [x] Create directory structure for models
+  - [x] Create `backend/internal/tools/` directory
+  - [x] Create `backend/internal/categories/` directory
+  - [x] Create `backend/internal/reviews/` directory
+  - [x] Create `backend/internal/bookmarks/` directory
+  - [x] Create `backend/internal/badges/` directory
+  - [x] Create `backend/internal/auth/` directory
+- [x] Define Tool model
+  - [x] Create `internal/tools/model.go`
+  - [x] Define Tool struct with all fields from schema
+  - [x] Add GORM tags for database mapping
+  - [x] Add JSON tags for API serialization (snake_case)
+  - [x] Configure relationships (Category, Tags, Media, Badges)
+- [x] Define Category model
+  - [x] Create `internal/categories/model.go`
+  - [x] Define Category struct with all fields
+  - [x] Add appropriate tags
+- [x] Define Tag model
+  - [x] Add Tag struct to `internal/tools/model.go`
+  - [x] Define with id, slug, name, timestamps
+- [x] Define Media model
+  - [x] Add Media struct to `internal/tools/model.go`
+  - [x] Define with tool relationship and type enum
+- [x] Define Badge model
+  - [x] Create `internal/badges/model.go`
+  - [x] Define Badge struct
+- [x] Define User model
+  - [x] Create `internal/auth/model.go`
+  - [x] Define User struct with role enum
+  - [x] Use pointer for nullable fields
+- [x] Define Review model
+  - [x] Create `internal/reviews/model.go`
+  - [x] Define Review struct with all rating fields
+  - [x] Configure moderation_status enum
+- [x] Define Bookmark model
+  - [x] Create `internal/bookmarks/model.go`
+  - [x] Define with composite unique constraint
+- [x] Define ToolAlternative model
+  - [x] Add to `internal/tools/model.go`
+  - [x] Configure relationship_type enum
+- [x] Write tests for models
+  - [x] Test GORM auto-migration works for all models
+  - [x] Test relationships are properly configured
+  - [x] Test JSON marshaling produces snake_case
+- [x] Validate model definitions
+  - [x] Run AutoMigrate successfully
+  - [x] Verify generated SQL matches migration schema
+
+---
+
+### Dev Notes
+
+**GORM Tag Conventions:**
+- Use `gorm:"column:snake_case"` for non-standard column names
+- Use `gorm:"uniqueIndex"` for unique constraints
+- Use `gorm:"foreignKey:FieldName"` for explicit foreign keys
+- Use `gorm:"many2many:join_table_name"` for many-to-many
+
+**JSON Serialization:**
+- All JSON tags must use snake_case to match API spec
+- Use `json:"field,omitempty"` for optional fields
+
+**Nullable Fields:**
+- Use pointers (*string, *time.Time) for nullable database fields
+
+---
+
+### Dev Agent Record
+
+#### Implementation Plan
+1. Created all model packages: categories, tools, auth, reviews, bookmarks, badges
+2. Defined all GORM models with proper tags and relationships
+3. Created comprehensive test suite for auto-migration, relationships, and JSON serialization
+
+#### Debug Log
+- All models use snake_case JSON tags as required
+- User model excludes password_hash from JSON with json:"-" tag
+- Nullable fields use pointers (*int, *time.Time)
+- Relationships configured with proper GORM tags
+
+#### Completion Notes
+✅ All 10 model types defined: Tool, Category, Tag, Media, Badge, ToolBadge, ToolAlternative, User, Review, Bookmark
+✅ GORM tags match database schema from migrations
+✅ JSON tags use snake_case for API compatibility
+✅ Relationships configured: Tool->Category (belongs to), Tool->Tags (many2many), Tool->Media (has many), Tool->Badges (many2many)
+✅ Comprehensive test suite validates:
+- Auto-migration creates all tables
+- Relationships work correctly (including Tool->Badges)
+- JSON marshaling produces snake_case
+- Unique constraints enforced
+- Password hash not exposed in JSON
+
+#### Code Review Fixes Applied (2025-12-26)
+🔧 **CRITICAL:** Removed duplicate Badge model from tools/model.go - now uses badges.Badge only
+🔧 **CRITICAL:** Fixed ErrorResponse calls in middleware.go (added missing statusCode parameter)
+🔧 **HIGH:** Added ToolBadge join table model with AssignedAt field to capture tool_badges.assigned_at
+🔧 **MEDIUM:** Added Tool->Badges many2many relationship test
+
+---
+
+### File List
+- backend/internal/categories/model.go (created)
+- backend/internal/tools/model.go (created, modified during code review)
+- backend/internal/auth/model.go (created)
+- backend/internal/reviews/model.go (created)
+- backend/internal/bookmarks/model.go (created)
+- backend/internal/badges/model.go (created)
+- backend/internal/platform/db/models_test.go (created, enhanced during code review)
+- backend/internal/platform/http/middleware.go (modified during code review - fixed ErrorResponse calls)
+
+---
+
+### Change Log
+- 2025-12-26: Story 1-3 completed - All GORM models defined with tests
+- 2025-12-26: Code review completed - Fixed duplicate Badge, added ToolBadge model, fixed middleware ErrorResponse calls, added Badges relationship test
+
+---
+
+### Status
+Done

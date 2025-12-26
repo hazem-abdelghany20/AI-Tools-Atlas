@@ -1,4 +1,4 @@
-### Story 8.3: Moderation Queue Backend
+### Story 8.3: Moderation Queue Backend ✅ DONE
 
 **As a** developer,
 **I want** moderation queue endpoints,

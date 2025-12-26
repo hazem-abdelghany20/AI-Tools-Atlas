@@ -1,4 +1,4 @@
-### Story 8.2: Report UI
+### Story 8.2: Report UI ✅ DONE
 
 **As a** user,
 **I want** to report tools or reviews,
@@ -36,3 +36,8 @@
 - `frontend/src/components/reviews/ReviewCard.vue` (add report button)
 
 ---
+
+## Change Log:
+| Date | Change |
+|------|--------|
+| 2025-12-26 | Code Review: MEDIUM - Added Escape key handler to ReportModal |

@@ -7,6 +7,7 @@ import (
 	"os"
 	"testing"
 
+	"github.com/your-org/ai-tools-atlas-backend/internal/auth"
 	"github.com/your-org/ai-tools-atlas-backend/internal/platform/config"
 	platformhttp "github.com/your-org/ai-tools-atlas-backend/internal/platform/http"
 )
@@ -30,8 +31,9 @@ func TestIntegration_HealthCheckEndpoint(t *testing.T) {
 		t.Fatalf("Failed to load config: %v", err)
 	}
 
-	// Setup router (without database for this test)
-	router := platformhttp.SetupRouter(cfg)
+	// Setup router (with nil database for health check test - handlers that need DB won't work)
+	authService := auth.NewService()
+	router := platformhttp.SetupRouter(cfg, nil, authService)
 
 	// Create test server
 	ts := httptest.NewServer(router)

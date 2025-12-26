@@ -1,5 +1,7 @@
 ### Story 7.2: Admin UI - Tools Management
 
+**Status:** Done ✅
+
 **As an** admin,
 **I want** a UI to manage tools,
 **So that** I can keep the catalog accurate and complete.
@@ -38,5 +40,32 @@
 - `frontend/src/views/admin/AdminToolsView.vue`
 - `frontend/src/components/admin/ToolFormModal.vue`
 - `frontend/src/router/admin.ts` (admin routes)
+
+---
+
+## Tasks
+
+### Task 1: Admin Tools View ✅
+- [x] Create `AdminToolsView.vue` with data table
+- [x] Implement search bar with debounce
+- [x] Add status filter (All/Active/Archived)
+- [x] Add pagination controls
+- [x] Add admin role check on mount
+
+### Task 2: Tool Form Modal ✅
+- [x] Create `ToolFormModal.vue` component
+- [x] Implement form for all tool fields
+- [x] Add validation for required fields
+- [x] Handle create and update modes
+- [x] Add error display
+
+### Task 3: Router Integration ✅
+- [x] Add admin/tools route with meta flags
+- [x] Add Admin Panel link in header for admin users
+- [x] Add profile link in header dropdown
+
+### Task 4: Types Update ✅
+- [x] Add `archived_at` field to Tool type
+- [x] Add `CreateToolInput` and `UpdateToolInput` types
 
 ---

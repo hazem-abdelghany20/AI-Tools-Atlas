@@ -4,5 +4,5 @@ SM → sprint-planning
 SM → create-story
 DEV → dev-story
 DEV → code-review
-Mark Story DONE
+Mark Story/epic DONE
 Loop

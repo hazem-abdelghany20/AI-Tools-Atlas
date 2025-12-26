@@ -4,7 +4,11 @@
 **I want** authentication endpoints for registration, login, and logout,
 **So that** users can create accounts and authenticate.
 
-**Acceptance Criteria:**
+**Status:** done
+
+---
+
+## Acceptance Criteria:
 
 **Endpoint: `POST /api/v1/auth/register`**
 - Request: `{ email, password, display_name }`
@@ -39,8 +43,60 @@
 
 **Prerequisites:** Epic 1 (Auth setup, User model)
 
-**Files Modified:**
-- `backend/internal/auth/service.go` (add register, login methods)
-- `backend/internal/auth/handler.go` (add registration/login handlers)
+---
+
+## Tasks/Subtasks:
+
+- [x] **Task 1: Create User Repository**
+  - [x] 1.1 Define Repository interface
+  - [x] 1.2 Implement Create method
+  - [x] 1.3 Implement GetByID method
+  - [x] 1.4 Implement GetByEmail method
+  - [x] 1.5 Implement EmailExists method
+  - [x] 1.6 Implement Update method
+
+- [x] **Task 2: Extend Auth Service**
+  - [x] 2.1 Add RegisterInput and LoginInput types
+  - [x] 2.2 Add UserResponse type
+  - [x] 2.3 Implement Register with validation
+  - [x] 2.4 Implement Login with credential check
+  - [x] 2.5 Implement GetCurrentUser
+  - [x] 2.6 Add NewServiceWithRepo constructor
+
+- [x] **Task 3: Create Auth Handler**
+  - [x] 3.1 Implement Register endpoint
+  - [x] 3.2 Implement Login endpoint
+  - [x] 3.3 Implement Logout endpoint
+  - [x] 3.4 Implement GetCurrentUser endpoint
+  - [x] 3.5 Handle HTTP-only cookie setting
+  - [x] 3.6 Integrate session bookmark migration
+
+- [x] **Task 4: Update Router**
+  - [x] 4.1 Add auth repository initialization
+  - [x] 4.2 Register auth routes
+  - [x] 4.3 Verify middleware integration
+
+- [x] **Task 5: Write Tests**
+  - [x] 5.1 Test Register success
+  - [x] 5.2 Test Register validation errors
+  - [x] 5.3 Test Login success
+  - [x] 5.4 Test Login invalid credentials
+  - [x] 5.5 Test Logout
+  - [x] 5.6 Test GetCurrentUser
 
 ---
+
+## File List:
+- `backend/internal/auth/repository.go` (created)
+- `backend/internal/auth/service.go` (modified)
+- `backend/internal/auth/handler.go` (created)
+- `backend/internal/auth/handler_test.go` (created)
+- `backend/internal/platform/http/router.go` (modified)
+
+---
+
+## Change Log:
+| Date | Change |
+|------|--------|
+| 2025-12-26 | Story implementation completed |
+| 2025-12-26 | Code Review: CRITICAL - Fixed context key "userID" to "user_id", added type assertion safety |
