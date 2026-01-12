@@ -5,84 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9374c78b-2b7e-44e1-92ab-ba71c5a01309" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/internal/auth/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/internal/auth/service.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/internal/auth/service_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/internal/badges/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/internal/bookmarks/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/internal/categories/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/internal/platform/db/migrations_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/internal/platform/db/models_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/internal/platform/http/middleware_auth_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/internal/reviews/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/internal/tools/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/migrations/000001_initial_schema.down.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/migrations/000001_initial_schema.up.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/postcss.config.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/assets/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/common/SkeletonCard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/common/Spinner.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/layout/AppShell.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/layout/HeaderNav.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/lib/apiClient.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/lib/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/router/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/stores/bookmarks.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/stores/filters.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/stores/session.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/BookmarksView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/CompareView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/HomeView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/SearchResultsView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/ToolProfileView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/vite-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/tailwind.config.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/tsconfig.node.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/vite.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/cmd/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cmd/api/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/cmd/api/main_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/cmd/api/main_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/backend/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/backend/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/internal/platform/http/middleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/internal/platform/http/middleware.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/internal/platform/http/responses.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/internal/platform/http/responses.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/internal/platform/http/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/backend/internal/platform/http/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/1-2-database-schema-migrations.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/1-2-database-schema-migrations.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/1-3-gorm-models.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/1-3-gorm-models.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/1-4-jwt-authentication-setup.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/1-4-jwt-authentication-setup.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/1-5-frontend-project-initialization.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/1-5-frontend-project-initialization.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/1-6-base-layout-components-dark-theme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/1-6-base-layout-components-dark-theme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/1-7-api-client-pinia-stores-setup.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/1-7-api-client-pinia-stores-setup.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/4-1-reviews-backend-api.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/4-1-reviews-backend-api.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/4-2-review-display-on-tool-profile.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/4-2-review-display-on-tool-profile.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/4-3-review-submission-form.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/4-3-review-submission-form.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/4-4-aggregated-ratings-display.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/4-4-aggregated-ratings-display.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/5-1-bookmarks-backend-api.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/5-1-bookmarks-backend-api.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/5-2-bookmarks-view.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/5-2-bookmarks-view.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/5-3-add-to-compare-from-results.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/5-3-add-to-compare-from-results.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/5-4-comparison-view.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/5-4-comparison-view.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/6-1-authentication-endpoints-user-registration.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/6-1-authentication-endpoints-user-registration.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/6-2-sign-in-sign-up-ui.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/6-2-sign-in-sign-up-ui.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/6-3-user-profile-activity.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/6-3-user-profile-activity.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/7-1-admin-tools-management-backend.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/7-1-admin-tools-management-backend.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/7-2-admin-ui-tools-management.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/7-2-admin-ui-tools-management.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/8-1-reporting-backend.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/8-1-reporting-backend.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/8-2-report-ui.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/8-2-report-ui.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/8-3-moderation-queue-backend.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/8-3-moderation-queue-backend.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/8-4-moderation-queue-ui.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/8-4-moderation-queue-ui.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sprint-artifacts/sprint-status.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sprint-artifacts/sprint-status.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workflow.txt" beforeDir="false" afterPath="$PROJECT_DIR$/workflow.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +77,9 @@
       <workItem from="1766749960003" duration="129000" />
       <workItem from="1766750120534" duration="4711000" />
       <workItem from="1766758059063" duration="7085000" />
-      <workItem from="1766750020477" duration="17048000" />
+      <workItem from="1766750020477" duration="19878000" />
+      <workItem from="1766814408290" duration="23000" />
+      <workItem from="1767144919426" duration="636000" />
     </task>
     <servers />
   </component>

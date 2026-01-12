@@ -115,3 +115,8 @@ development_status:
   8-3-moderation-queue-backend: done
   8-4-moderation-queue-ui: done
   epic-8-retrospective: optional
+
+  # Epic 9: Bug Fixes & Polish
+  epic-9: in-progress
+  9-1-review-ui-rating-statistics-fixes: ready-for-dev
+  epic-9-retrospective: optional
